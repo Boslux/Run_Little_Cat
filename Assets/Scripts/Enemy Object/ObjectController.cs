@@ -5,10 +5,11 @@ using UnityEngine;
 
 public class ObjectController : MonoBehaviour
 {
-    [Header("")]
+    [Header("Component")]
     private Rigidbody2D rb;
     public Transform[] transforms; // 0=player, 1=spawner position
 
+    [Header("Value")]
     public float speed;
     private float fixedSpeed=100;
     public float whereObjectGoX;

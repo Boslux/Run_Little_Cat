@@ -20,7 +20,7 @@ public class AreaAttack : MonoBehaviour
     void DestroyAreaAttack()
     {
         Destroy(gameObject,1.6f);
-        Debug.Log("destoyed");
+        Debug.Log("Hoşçakal");
     }
     IEnumerator DecreaseAlphaOverTime()
 {

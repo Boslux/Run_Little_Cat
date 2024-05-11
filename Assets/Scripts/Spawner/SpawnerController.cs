@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class SpawnerController : MonoBehaviour
 {
-    [Header("Compenent")]
+    [Header("Component")]
     public GameObject[] spawnObject; //objeler
     
     [Header("Value")]
