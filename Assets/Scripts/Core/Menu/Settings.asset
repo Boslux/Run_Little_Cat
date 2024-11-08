@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2600b9f95b696cc41af32f0bc7f52e2d, type: 3}
   m_Name: Settings
   m_EditorClassIdentifier: 
-  scoreT: 0
-  soundCheck: 0
+  scoreT: 1
+  soundCheck: 1

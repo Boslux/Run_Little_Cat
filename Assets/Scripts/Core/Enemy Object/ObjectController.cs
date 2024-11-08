@@ -6,19 +6,19 @@ using UnityEngine;
 public class ObjectController : MonoBehaviour
 {
     [Header("Component")]
-    private Rigidbody2D rb;
-    public Transform[] transforms; // 0=player, 1=spawner position
+    private Rigidbody2D _rb;
+    public Transform playerTransform; // 0=player, 1=spawner position
 
     [Header("Value")]
     public float speed;
-    private float fixedSpeed=100;
+    private float _fixedSpeed=100;
     public float whereObjectGoX;
     public float whereObjectGoY;
-    private float destroyTime=11;
+    private float _destroyTime=11;
     //
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        _rb = GetComponent<Rigidbody2D>();
         PositionControl();
         OnDestroy();
     }
@@ -28,8 +28,8 @@ public class ObjectController : MonoBehaviour
     }
     void PositionControl()
     {
-        float whereX=transforms[0].position.x+transform.position.x; //control player.x position
-        float whereY=transforms[0].position.y+transform.position.y; //control player.y position
+        float whereX=playerTransform.position.x+transform.position.x; //control player.x position
+        float whereY=playerTransform.position.y+transform.position.y; //control player.y position
 
         //Control Right and Left spawner position
         if(whereX<0)
@@ -53,11 +53,11 @@ public class ObjectController : MonoBehaviour
     }
     void ObjectMovement()
     {
-        Vector2 move= new Vector2(whereObjectGoX,whereObjectGoY)*Time.deltaTime*speed*fixedSpeed;
-        rb.velocity = move;
+        Vector2 move= new Vector2(whereObjectGoX,whereObjectGoY)*Time.deltaTime*speed*_fixedSpeed;
+        _rb.linearVelocity = move;
     }
     void OnDestroy()
     {
-        Destroy(gameObject,destroyTime);
+        Destroy(gameObject,_destroyTime);
     }
 }

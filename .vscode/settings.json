@@ -1,3 +1,4 @@
 {
-    "dotnet.preferCSharpExtension": true
+    "dotnet.preferCSharpExtension": true,
+    "dotnet.defaultSolution": "Escape_From_Object.sln"
 }
